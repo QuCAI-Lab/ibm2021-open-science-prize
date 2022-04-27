@@ -1,0 +1,39 @@
+name: heisenberg-model
+channels:
+  - conda-forge
+dependencies:
+  - python==3.7.13 
+  - numpy==1.20.1
+  - matplotlib==3.5.1
+  - pylatexenc==2.10
+  - watermark==2.3.0
+  - jupyter
+
+# To manually install the above packages with Conda:
+## $ conda update -yn base -c defaults conda
+## $ conda install -c anaconda python==3.7.13
+## $ conda install -c anaconda numpy==1.20.1
+## $ conda install -c conda-forge matplotlib==3.5.1
+## $ conda install -c conda-forge pylatexenc==2.10
+## $ conda install -c conda-forge watermark==2.3.0
+## $ conda install -c anaconda jupyter
+
+# Other packages that must be installed via pip:
+## Note: Windows users should replace "python3" with "python" and "python3 -m pip -U" with "python -m pip".
+## $ python3 -m pip install -U --upgrade pip 
+## $ python3 -m pip install -U qiskit==0.35.0
+
+# To create this environment:
+## conda env create -n heisenberg-model environment.yml 
+
+# Future updates
+## $ conda env update -n <env_name_exist> --file environment.yml --prune && conda activate <env_name_exist> && python3 -m pip install --no-deps -e -v .
+
+# To export your changes to a new conda env. (suggested for sharing between users):
+## $ conda env export --from-history -n <env_name_exist> > environment.yml
+
+# CLI - command-line interface
+## To show env. info: $ conda info
+## To show installed packages: $ conda list
+## To list a package info: $ conda list <package_name>
+## To remove the env.: $ conda remove --name <env_name_exists> --all
