@@ -49,7 +49,7 @@ For specific versions, see the [requirements.txt](requirements.txt) file.
   
 View source code [here](https://github.com/QuCAI-Lab/ibm2021-open-science-prize/tree/dev/heisenberg_model/main). To know about the step-by-step simulation, one can resort to the [simulation.ipynb](simulation.ipynb) Jupyter notebook file and the corresponding [supplementary.ipynb](supplementary.ipynb) material for theoretical insight.
     
-Classical simulation shows that state fidelity does not increase with increasing number of Trotter steps given that F4(t=π)<F3(t=π)<F2(t=π). Classical simulation without noise also suggests a minimum number of N_min=6 Trotter steps (F6 ~58%) to comply with the competition judging criteria where the state fidelity is lower bounded at 30% for N ≥ 4. A baseline number of N=8 Trotter steps is recommended according to simulations using the fake Jakarta backend. Since the simulation shown in the graph below considers a noise-free environment, the state fidelity is between two pure states (a.k.a state vectors). This contrasts with a noisy system that requires the evolved state to be represented by a [mixed density operator](https://qiskit.org/textbook/ch-quantum-hardware/density-matrix.html#:~:text=corrupted) (noise creates mixed states) and the state fidelity to be given in terms of the trace function. Recall that, although a mixed state (See Ref. [[1](https://doi.org/10.1017/CBO9780511976667)]) consist of an ensemble (statistical mixture) of N pure states (denoted |ψ> in the state vector formalism), a mixed state cannot be represented by a linear combination of the aforementioned normalized state vectors (pure states) or wave functions. One should be wary that, rigorously, the scalar wave function ψ(r) in the position space (continuous spectrum) is obtained via the projection onto eigenfunctions (|r>) of position: ψ(r) = <r|ψ>, where |ψ> is the linear combination given by an integral rather than a summation (See Ref. [3], Section 3.2.3, pg. 103). 
+Classical simulation shows that state fidelity does not increase with increasing number of Trotter steps given that F4(t=π)<F3(t=π)<F2(t=π). Classical simulation without noise also suggests a minimum number of N_min=6 Trotter steps (F6 ~58%) to comply with the competition judging criteria where the state fidelity is lower bounded at 30% for N ≥ 4. A baseline number of N=8 Trotter steps is recommended according to simulations using the fake Jakarta backend. Since the simulation shown in the graph below considers a noise-free environment, the state fidelity is between two pure states (a.k.a state vectors). This contrasts with a noisy system that requires the evolved state to be represented by a [mixed density operator](https://qiskit.org/textbook/ch-quantum-hardware/density-matrix.html#:~:text=corrupted) (noise creates mixed states) and the state fidelity to be given in terms of the trace function. Recall that, although a mixed state (See Ref. [[1](https://doi.org/10.1017/CBO9780511976667)]) consist of an ensemble (statistical mixture) of N pure states (denoted |ψ> in the state vector formalism), a mixed state cannot be represented by a linear combination of the aforementioned normalized state vectors (pure states).
 
   
 <div align="center">
@@ -155,15 +155,18 @@ In step 1, as the number of Trotter steps increases, the simulation becomes more
   
 # References &nbsp; <a href="#"><img valign="middle" height="45px" src="https://img.icons8.com/book" width="45" hspace="0px" vspace="0px"></a> 
   
-\[1] Nielsen MA, Chuang IL. 2010. Quantum Computation and Quantum Information. New York: [Cambridge Univ. Press.](https://doi.org/10.1017/CBO9780511976667) 10th Anniv. Ed. Chapter 4.7.2: The quantum simulation algorithm, pg. 207, Theorem 4.3: (Trotter formula). Chapter 9.2.2: Fidelity, pg. 409.
+\[1] Nielsen MA, Chuang IL. 2010. Quantum Computation and Quantum Information. New York: [Cambridge Univ. Press.](https://doi.org/10.1017/CBO9780511976667) 10th Anniv. Ed. 
+- Corollary 4.2, pg. 176: Gate decomposition.
+- Theorem 4.3, pg. 207: Trotter formula. 
+- Chapter 4.7.2, pg. 206: The quantum simulation algorithm. 
+- Chapter 9.2.2, pg. 409: State fidelity.
   
-\[2] Piotr Czarnik, Andrew Arrasmith, Patrick J. Coles, and Lukasz Cincio. Error mitigation with Clifford quantum-circuit data. Quantum, 5:592, (2021). [doi:10.22331/q-2021-11-26-592](http://dx.doi.org/10.22331/q-2021-11-26-592).
-  
-\[3] Griffiths, David J., and Darrell F. Schroeter. Introduction to quantum mechanics. Cambridge University Press, 2018.
+\[2] Griffiths, David J., and Darrell F. Schroeter. Introduction to quantum mechanics. Cambridge University Press, 2018.
+- Section 3.2.3, pg. 103: scalar wave function.
 
-\[4] [ibmq-qsim-challenge.ipynb](https://github.com/qiskit-community/open-science-prize-2021/blob/main/ibmq-qsim-challenge.ipynb).
+\[3] [ibmq-qsim-challenge.ipynb](https://github.com/qiskit-community/open-science-prize-2021/blob/main/ibmq-qsim-challenge.ipynb).
 
-\[5] [ibmq-qsim-sup-mat.ipynb](https://github.com/qiskit-community/open-science-prize-2021/blob/main/ibmq-qsim-sup-mat.ipynb).
+\[4] [ibmq-qsim-sup-mat.ipynb](https://github.com/qiskit-community/open-science-prize-2021/blob/main/ibmq-qsim-sup-mat.ipynb).
   
 
 # License
