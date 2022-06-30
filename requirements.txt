@@ -1,0 +1,32 @@
+# DEPENDENCIES
+# This file defines the pip-equivalent package dependencies to be installed with either setup.cfg or setup.py modules, or via the command-line interface (CLI) on prem.
+# pip can be installed via: "conda install pip==22.0.4" (conda env. on prem) or "apt install python3-pip" (Ubuntu-derivatives).
+
+# PACKAGES
+numpy==1.20.1 
+qiskit==0.35.0
+matplotlib==3.5.1
+watermark==2.3.0 # IPython magic extension for versioning control between Colab notebooks.
+pylatexenc==2.10 # The 'pylatexenc' library is required to use 'MatplotlibDrawer'.
+jupyter #Run using: "$ jupyter notebook"
+
+# CLI - command-line interface
+## To show the current pip version, run: $ pip --version (or $ pip -V)
+## To upgrade pip, run: $ python3 -m pip install --user --upgrade pip 
+## To install an individual package, run: $ python3 -m pip install --user <package-name>.
+## To list installed packages, run: $ pip list
+## To show a package info, run: $ pip show <package-name>
+## To upgrade a package, run: $ python3 -m pip install --user --upgrade <package-name>==<version-number>
+## To uninstall packages, run: $ pip uninstall <package1> <package2>
+
+# SETUP.py
+## The setup.py module reads this file and installs each package via the pip tool (a python package manager).
+## Alternatively, one can manually install all dependencies on this file via: $ python3 -m pip install -r requirements.txt
+## To manually upgrade this file dependencies, run: $ python3 -m pip install -U -r requirements.txt
+
+# NOTES
+## Windows users should replace "python3" with "python" and "python3 -m pip --user" with "python -m pip".
+## The "--user" flag can be replaced with the abbreviate "-U" flag. 
+## The -m flag in "python3 -m pip" enforce the pip version tied to the active environment, i.e, executes pip as the __main__ module).
+## The 'pip install jupyter' command will install the Jupyter system, including the jupyter notebook, qtconsole, and the IPython kernel.
+## One should avoid 'pip install conda' since it will not give conda as a standalone application.
